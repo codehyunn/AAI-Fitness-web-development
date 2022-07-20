@@ -74,4 +74,4 @@ content_total_link = list(map(lambda data: "https://youtube.com" + data["href"],
 content_total_dict = {'title' : content_total_title, 'link': content_total_link}
 
 df = pd.DataFrame(content_total_dict)
-df.to_csv("/Users/seoyoung/Desktop/mediapipe_web/data/content_total.csv", encoding='utf-8-sig')
+df.to_csv("content_total.csv", encoding='utf-8-sig')
