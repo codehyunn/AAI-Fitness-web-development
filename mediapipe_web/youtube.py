@@ -75,3 +75,9 @@ content_total_dict = {'title' : content_total_title, 'link': content_total_link}
 
 df = pd.DataFrame(content_total_dict)
 df.to_csv("content_total.csv", encoding='utf-8-sig')
+
+import pandas as pd
+file = 'content_total.csv' # 경로 수정
+df = pd.read_csv(file)
+result = df.sample(n = 6, replace = False)
+print(result[['title','link']])
